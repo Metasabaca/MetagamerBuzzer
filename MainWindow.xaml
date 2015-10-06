@@ -1,0 +1,76 @@
+﻿<Window x:Class="MetagamerBuzzer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Le Metagamer" Height="400" Width="720"
+        ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Équipe 1" HorizontalAlignment="Left" Margin="73,20,0,0" VerticalAlignment="Top" Panel.ZIndex="1" FontSize="20"/>
+        <Label Content="Équipe 2" HorizontalAlignment="Left" Margin="302,20,0,0" VerticalAlignment="Top" Panel.ZIndex="1" FontSize="20"/>
+        <Label Content="Équipe 3" HorizontalAlignment="Left" Margin="529,20,0,0" VerticalAlignment="Top" Panel.ZIndex="1" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="230" Margin="7,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="229" Panel.ZIndex="0"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="230" Margin="465,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="227" Panel.ZIndex="0"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="230" Margin="235,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="231" Panel.ZIndex="0"/>
+        <Button x:Name="team1PlusOne" Content="+1" HorizontalAlignment="Left" Margin="76,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team1PlusOne_Click"/>
+        <Button x:Name="team1PlusTwo" Content="+2" HorizontalAlignment="Left" Margin="107,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team1PlusTwo_Click"/>
+        <Button x:Name="team1PlusThree" Content="+3" HorizontalAlignment="Left" Margin="137,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team1PlusThree_Click"/>
+        <Button x:Name="team1PlusFive" Content="+5" HorizontalAlignment="Left" Margin="167,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team1PlusFive_Click"/>
+        <Button x:Name="team1MinusOne" Content="-1" HorizontalAlignment="Left" Margin="45,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team1MinusOne_Click"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="42,62,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="84,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="team2PlusOne" Content="+1" HorizontalAlignment="Left" Margin="302,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team2PlusOne_Click"/>
+        <Button x:Name="team2PlusTwo" Content="+2" HorizontalAlignment="Left" Margin="333,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team2PlusTwo_Click"/>
+        <Button x:Name="team2PlusThree" Content="+3" HorizontalAlignment="Left" Margin="363,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team2PlusThree_Click"/>
+        <Button x:Name="team2PlusFive" Content="+5" HorizontalAlignment="Left" Margin="393,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team2PlusFive_Click"/>
+        <Button x:Name="team2MinusOne" Content="-1" HorizontalAlignment="Left" Margin="271,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team2MinusOne_Click"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="268,62,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="310,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="team3PlusOne" Content="+1" HorizontalAlignment="Left" Margin="530,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team3PlusOne_Click"/>
+        <Button x:Name="team3PlusTwo" Content="+2" HorizontalAlignment="Left" Margin="561,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team3PlusTwo_Click"/>
+        <Button x:Name="team3PlusThree" Content="+3" HorizontalAlignment="Left" Margin="591,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team3PlusThree_Click"/>
+        <Button x:Name="team3PlusFive" Content="+5" HorizontalAlignment="Left" Margin="621,103,0,0" VerticalAlignment="Top" Width="25" Height="25" Click="team3PlusFive_Click"/>
+        <Button x:Name="team3MinusOne" Content="-1" HorizontalAlignment="Left" Margin="499,103,0,0" VerticalAlignment="Top" Width="26" Height="25" Click="team3MinusOne_Click"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="496,62,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="539,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="team1BuzzAlert" Content="A BUZZÉ" Foreground="Green" HorizontalAlignment="Left" Margin="70,170,0,0" VerticalAlignment="Top" FontSize="24" Visibility="Hidden"/>
+        <Label x:Name="team2BuzzAlert" Content="A BUZZÉ" Foreground="Green" HorizontalAlignment="Left" Margin="296,170,0,0" VerticalAlignment="Top" FontSize="24" Visibility="Hidden"/>
+        <Label x:Name="team3BuzzAlert" Content="A BUZZÉ" Foreground="Green" HorizontalAlignment="Left" Margin="524,170,0,0" VerticalAlignment="Top" FontSize="24" Visibility="Hidden"/>
+        <Label Content="Score :" HorizontalAlignment="Left" Margin="74,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="team1Score" HorizontalAlignment="Left" Height="20" Margin="119,141,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="36" TextChanged="team1Score_TextChanged"/>
+        <Label Content="Score :" HorizontalAlignment="Left" Margin="300,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="team2Score" HorizontalAlignment="Left" Height="20" Margin="345,141,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="36" TextChanged="team2Score_TextChanged"/>
+        <Label Content="Score :" HorizontalAlignment="Left" Margin="527,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="team3Score" HorizontalAlignment="Left" Height="20" Margin="572,141,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="36" TextChanged="team3Score_TextChanged"/>
+        <Button x:Name="team1RightAnswer" Content="Vrai" HorizontalAlignment="Left" Margin="27,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team1RightAnswer_Click"/>
+        <Button x:Name="team1WrongAnswer" Content="Faux" HorizontalAlignment="Left" Margin="137,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team1WrongAnswer_Click"/>
+        <Button x:Name="team2RightAnswer" Content="Vrai" HorizontalAlignment="Left" Margin="253,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team2RightAnswer_Click"/>
+        <Button x:Name="team2WrongAnswer" Content="Faux" HorizontalAlignment="Left" Margin="363,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team2WrongAnswer_Click"/>
+        <Button x:Name="team3RightAnswer" Content="Vrai" HorizontalAlignment="Left" Margin="481,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team3RightAnswer_Click"/>
+        <Button x:Name="team3WrongAnswer" Content="Faux" HorizontalAlignment="Left" Margin="591,212,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="team3WrongAnswer_Click"/>
+        <GroupBox Header="Manche 1" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Height="106" Width="226"/>
+        <Label x:Name="manche1LabelQuestion" Content="Question n°" HorizontalAlignment="Left" Margin="22,266,0,0" VerticalAlignment="Top" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="manche1Number" Content="" HorizontalAlignment="Left" Margin="95,266,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="manche1Ratio" Content="" HorizontalAlignment="Left" Margin="193,257,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="manche1Button" Content="Commencer" HorizontalAlignment="Left" Margin="60,307,0,0" VerticalAlignment="Top" Width="122" Height="29" Click="manche1Button_Click"/>
+        <Button x:Name="manche1Previous" Content="‹‹" HorizontalAlignment="Left" Margin="21,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche1Previous_Click"/>
+        <Button x:Name="manche1Next" Content="››" HorizontalAlignment="Left" Margin="187,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche1Next_Click"/>
+        <Label x:Name="manche1LabelPoints" Content="Points : " HorizontalAlignment="Left" Margin="129,268,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="manche1Points" Content="" HorizontalAlignment="Left" Margin="170,266,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <GroupBox Header="Manche 2" HorizontalAlignment="Left" Margin="238,245,0,0" VerticalAlignment="Top" Height="106" Width="226"/>
+        <Label x:Name="manche2Number" Content="" HorizontalAlignment="Left" Margin="323,266,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="manche2Ratio" Content="" HorizontalAlignment="Left" Margin="421,257,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="manche2Button" Content="Commencer" HorizontalAlignment="Left" Margin="288,307,0,0" VerticalAlignment="Top" Width="122" Height="29" Click="manche2Button_Click"/>
+        <Button x:Name="manche2Previous" Content="‹‹" HorizontalAlignment="Left" Margin="249,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche2Previous_Click"/>
+        <Button x:Name="manche2Next" Content="››" HorizontalAlignment="Left" Margin="415,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche2Next_Click"/>
+        <Label x:Name="manche2Points" Content="" HorizontalAlignment="Left" Margin="398,266,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="manche2LabelQuestion" Content="Question n°" HorizontalAlignment="Left" Margin="250,266,0,0" VerticalAlignment="Top" FontSize="14" Visibility="Hidden"/>
+        <Label x:Name="manche2LabelPoints" Content="Points : " HorizontalAlignment="Left" Margin="357,268,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <GroupBox Header="Manche 3" HorizontalAlignment="Left" Margin="467,245,0,0" VerticalAlignment="Top" Height="106" Width="226"/>
+        <Label x:Name="manche3LabelElement" Content="" HorizontalAlignment="Left" Margin="479,266,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="manche3Button" Content="Commencer" HorizontalAlignment="Left" Margin="517,307,0,0" VerticalAlignment="Top" Width="122" Height="29" Click="manche3Button_Click"/>
+        <Button x:Name="manche3Previous" Content="‹‹" HorizontalAlignment="Left" Margin="478,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche3Previous_Click"/>
+        <Button x:Name="manche3Next" Content="››" HorizontalAlignment="Left" Margin="644,307,0,0" VerticalAlignment="Top" Width="34" Height="29" FontSize="16" IsEnabled="False" Click="manche3Next_Click"/>
+        <RadioButton x:Name="manche3Question" Content="Question" HorizontalAlignment="Left" Margin="608,259,0,0" VerticalAlignment="Top" Checked="manche3Question_Checked"/>
+        <RadioButton x:Name="manche3Musique" Content="Musique" HorizontalAlignment="Left" Margin="608,274,0,0" VerticalAlignment="Top" Checked="manche3Musique_Checked"/>
+        <RadioButton x:Name="manche3Devinette" Content="Devinette" HorizontalAlignment="Left" Margin="608,289,0,0" VerticalAlignment="Top" Checked="manche3Devinette_Checked"/>
+    </Grid>
+</Window>
